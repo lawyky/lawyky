@@ -18,14 +18,15 @@
 		"commit": "git pull && git add -A && git-cz && git push"
 	},
 	"dependencies": {
+		"@ant-design/icons": "^5.2.6",
 		"@reduxjs/toolkit": "^1.8.3",
 		"antd": "^5.12.4",
 		"axios": "^0.27.2",
+		"dayjs": "^1.11.10",
 		"echarts": "^5.3.3",
 		"i18next": "^21.8.10",
 		"immer": "^9.0.15",
 		"js-md5": "^0.7.3",
-		"moment": "^2.29.3",
 		"nprogress": "^0.2.0",
 		"qs": "^6.10.5",
 		"react": "^18.2.0",

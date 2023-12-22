@@ -1,4 +1,5 @@
-import { Tabs, message } from "antd";
+// import { Tabs, message } from "antd";
+import { Tabs } from "antd";
 import { HomeFilled } from "@ant-design/icons";
 import { useEffect, useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
@@ -9,12 +10,13 @@ import { routerArray } from "@/routers";
 import { searchRoute } from "@/utils/util";
 import MoreButton from "./components/MoreButton";
 import "./index.less";
+import type { TabsProps } from "antd";
 
 const LayoutTabs = () => {
 	const dispatch = useDispatch();
 	const { tabsList } = useSelector((state: RootState) => state.tabs);
 
-	const { TabPane } = Tabs;
+	// const { TabPane } = Tabs;
 	const { pathname } = useLocation();
 	const navigate = useNavigate();
 	const [activeValue, setActiveValue] = useState<string>(pathname);
@@ -50,13 +52,24 @@ const LayoutTabs = () => {
 				navigate(nextTab.path);
 			});
 		}
-		message.success("你删除了Tabs标签 😆😆😆");
+		// message.success("你删除了Tabs标签 😆😆😆");
 		dispatch(setTabsList(tabsList.filter((item: Menu.MenuOptions) => item.path !== tabPath)));
 	};
+
+	const items: TabsProps["items"] = [];
+	tabsList.forEach((item: Menu.MenuOptions) => {
+		items.push({
+			key: item.path,
+			label: item.title,
+			icon: item.path == HOME_URL ? <HomeFilled rev={undefined} /> : <span />,
+			closable: item.path !== HOME_URL
+		});
+	});
 
 	return (
 		<div className="tabs">
 			<Tabs
+				items={items}
 				activeKey={activeValue}
 				onChange={clickTabs}
 				hideAdd
@@ -65,20 +78,20 @@ const LayoutTabs = () => {
 					delTabs(path as string);
 				}}
 			>
-				{tabsList.map((item: Menu.MenuOptions) => {
+				{/* {tabsList.map((item: Menu.MenuOptions) => {
 					return (
 						<TabPane
 							key={item.path}
 							tab={
 								<span>
-									{item.path == HOME_URL ? <HomeFilled /> : ""}
+									{item.path == HOME_URL ? <HomeFilled rev={undefined} /> : ""}
 									{item.title}
 								</span>
 							}
 							closable={item.path !== HOME_URL}
 						></TabPane>
 					);
-				})}
+				})} */}
 			</Tabs>
 			<MoreButton delTabs={delTabs}></MoreButton>
 		</div>

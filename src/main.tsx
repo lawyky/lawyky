@@ -2,7 +2,7 @@ import "@/styles/reset.less";
 import "@/assets/iconfont/iconfont.less";
 
 // import "antd/dist/antd.less";
-
+// import "antd/dist/reset.css";
 
 import "@/styles/common.less";
 import "@/language/index";

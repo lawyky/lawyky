@@ -7,15 +7,17 @@ const BreadcrumbNav = () => {
 	const { pathname } = useLocation();
 	const breadcrumbState = useSelector((state: RootState) => state.breadcrumb);
 	const breadcrumbList = breadcrumbState.breadcrumbList[pathname] || [];
-
-	return (
-		<Breadcrumb>
-			<Breadcrumb.Item href={`#${HOME_URL}`}>首页</Breadcrumb.Item>
-			{breadcrumbList.map((item: string) => {
-				return <Breadcrumb.Item key={item}>{item !== "首页" ? item : null}</Breadcrumb.Item>;
-			})}
-		</Breadcrumb>
-	);
+	const items = [];
+	items.push({
+		title: "首页",
+		href: `#${HOME_URL}`
+	});
+	breadcrumbList.forEach((element: string) => {
+		items.push({
+			title: element !== "首页" ? element : null
+		});
+	});
+	return <Breadcrumb items={items}></Breadcrumb>;
 };
 
 export default BreadcrumbNav;

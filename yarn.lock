@@ -1751,7 +1751,7 @@
   "resolved" "https://registry.npmmirror.com/dateformat/-/dateformat-3.0.3.tgz"
   "version" "3.0.3"
 
-"dayjs@^1.11.1", "dayjs@>= 1.x":
+"dayjs@^1.11.1", "dayjs@^1.11.10", "dayjs@>= 1.x":
   "integrity" "sha512-vjAczensTgRcqDERK0SR2XMwsF/tSvnvlv6VcF2GIhg6Sx4yOIt/irsr1RDJsKiIyBzJDpCoXiWWq28MqH2cnQ=="
   "resolved" "https://registry.npmmirror.com/dayjs/-/dayjs-1.11.10.tgz"
   "version" "1.11.10"
@@ -3588,7 +3588,7 @@
   "resolved" "https://registry.npmmirror.com/modify-values/-/modify-values-1.0.1.tgz"
   "version" "1.0.1"
 
-"moment@^2.29.3", "moment@>= 2.x":
+"moment@>= 2.x":
   "integrity" "sha512-c6YRvhEo//6T2Jz/vVtYzqBzwvPT95JBQ+smCytzf7c50oMZRsR/a4w88aD34I+/QVSfnoAnSBFPJHItlOMJVw=="
   "resolved" "https://registry.npmjs.org/moment/-/moment-2.29.3.tgz"
   "version" "2.29.3"
