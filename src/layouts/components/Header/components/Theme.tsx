@@ -28,13 +28,10 @@ const Theme = () => {
 				onClose={() => {
 					setVisible(false);
 				}}
-				visible={visible}
+				open={visible}
 				width={320}
 			>
-				<Divider className="divider">
-					<FireOutlined />
-					全局主题
-				</Divider>
+				<Divider className="divider">全局主题</Divider>
 				<div className="theme-item">
 					<span>暗黑模式（未完成）</span>
 					<Switch
