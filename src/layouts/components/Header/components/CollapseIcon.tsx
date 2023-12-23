@@ -13,7 +13,7 @@ const CollapseIcon = () => {
 				dispatch(updateCollapse(!isCollapse));
 			}}
 		>
-			{isCollapse ? <MenuUnfoldOutlined /> : <MenuFoldOutlined />}
+			{isCollapse ? <MenuUnfoldOutlined rev={undefined} /> : <MenuFoldOutlined rev={undefined} />}
 		</div>
 	);
 };

@@ -1,12 +1,12 @@
 import React from "react";
 import lazyLoad from "@/routers/utils/lazyLoad";
-import { LayoutIndex } from "@/routers/constant";
+// import { LayoutIndex } from "@/routers/constant";
 import { RouteObject } from "@/routers/interface";
 
 // 数据大屏模块
 const dataScreenRouter: Array<RouteObject> = [
 	{
-		element: <LayoutIndex />,
+		// element: <LayoutIndex />,
 		children: [
 			{
 				path: "/dataScreen/index",

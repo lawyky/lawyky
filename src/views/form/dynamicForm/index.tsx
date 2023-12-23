@@ -20,11 +20,11 @@ const DynamicForm = () => {
 								<Form.Item {...restField} name={[name, "last"]} rules={[{ required: true, message: "Missing last name" }]}>
 									<Input placeholder="Last Name" />
 								</Form.Item>
-								<MinusCircleOutlined onClick={() => remove(name)} />
+								<MinusCircleOutlined onClick={() => remove(name)} rev={undefined} />
 							</Space>
 						))}
 						<Form.Item>
-							<Button type="dashed" onClick={() => add()} block icon={<PlusOutlined />}>
+							<Button type="dashed" onClick={() => add()} block icon={<PlusOutlined rev={undefined} />}>
 								Add field
 							</Button>
 						</Form.Item>
